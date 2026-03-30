@@ -9,7 +9,7 @@ tasks = [
 
 @app.route("/")
 def home():
-    return jsonify({"message": "Microservicio de tareas activo"})
+    return jsonify({"message": "Microservicio de gestión de tareas - API REST v1.0"})
 
 @app.route("/health")
 def health():
