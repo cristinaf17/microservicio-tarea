@@ -35,5 +35,20 @@ def add_task():
     tasks.append(new_task)
     return jsonify(new_task), 201
 
+@app.route("/tasks/<int:task_id>", methods=["GET"])
+def get_task(task_id):
+    task = next((t for t in tasks if t["id"] == task_id), None)
+    if task is None:
+        return jsonify({"error": "Tarea no encontrada"}), 404
+    return jsonify(task)
+
+@app.route("/tasks/<int:task_id>", methods=["DELETE"])
+def delete_task(task_id):
+    task = next((t for t in tasks if t["id"] == task_id), None)
+    if task is None:
+        return jsonify({"error": "Tarea no encontrada"}), 404
+    tasks.remove(task)
+    return jsonify({"message": "Tarea eliminada correctamente"})
+
 if __name__ == "__main__":
     app.run(debug=True)
