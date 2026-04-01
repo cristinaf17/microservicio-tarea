@@ -4,7 +4,7 @@ API REST desarrollada con Flask para la gestión de tareas.
 
 ## Integrantes
 - Cristina Silva (cristinaf17)
-- [Sebastian antipan] (Seba13)
+- [Sebastian antipan] (Saab85)
 
 ## Descripción
 Microservicio que permite crear, listar, obtener y eliminar tareas mediante una API REST.
